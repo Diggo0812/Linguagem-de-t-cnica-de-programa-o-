@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[]) {
 	
-  /*int primeiro, segundo, aux;
+  int primeiro, segundo, aux;
 	
 	printf("Digite o primeiro Valor:");
 	scanf("%d" , &primeiro);
@@ -17,18 +17,18 @@ int main(int argc, char *argv[]) {
 	primeiro = segundo;
 	segundo = aux;
 	
-	printf ("%d \n %d", primeiro, segundo); */
+	printf ("%d \n %d", primeiro, segundo); 
 	
-	//segundo exercício
+	//segundo exercÃ­cio
 	
 	double valor;
 	
 	printf("\n Digite um Valor:");
 	scanf ("%lf" , &valor);
 	
-	printf ("notação cientifica: %lf\n" , valor);
+	printf ("notaÃ§Ã£o cientifica: %lf\n" , valor);
 	
-	//terceiro exercício
+	//terceiro exercÃ­cio
 	
 	
 	
