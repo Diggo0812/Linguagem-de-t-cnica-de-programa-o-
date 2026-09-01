@@ -1,46 +1,60 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+/* crie um programa que leia um numero, entre 1 e 9 e caso seja positivo,
+verifique se ele é um numero primo, caso seja, imprima seu doblo,caso não seja primo,
+verifique se é par ou impar. se for par mostre o resultado da soma com 2. se for impar 
+mostre seu proximo e seu anterior. caso seja negativo mostre seu inverso.
+caso não esteja entre 1 e 9 mostre _out_of_range. */
 
 int main(int argc, char *argv[]) {
 	
-	int a, b, c;
-	int resultado;
+	int n;
+	printf("entre com o numero: ");
+	scanf("%d" , &n);
 	
-printf ("Insira os valores de A, B, C:");
-scanf("%d %d %d", &a, &b, &c );
-
-if (a>b){
-	resultado = a;
+	// equivalente (n>= 1 && n<=9
+	
+	if (n<10 && n>0)
+		
+		// isso é interessante (!(n==4 || n==6 || n==8 || n==9))
+		
+		if(n==1 || n==2 || n==3 || n==5 || n==7)
+			
+			printf("o dobro de %d = %d", n,(n*2));
+		
+		else if(n%2 == 0)
+			printf("%d+2 = %d" , n , n+2);
+		
+		else
+			printf("|| %d|%d|%d", n-1, n,n+2);
+			
+		else printf("_out_of_range");
+		
+			
+		
+		
+	char op;
+	scanf("%c" ,&op);
+	switch(op){
+	
+	case 'a' : printf("opa ta falando com ele"); break;
+	
+	case 'b' : printf("Benedito"); break;
+	
+	case 'c' : printf("É complicada a situação"); break;
+	
+	case 'd' : printf("Tamo Junto"); break;
+	
 }
-else{
-	resultado = b;
-}	
-
-if (c>resultado){
-	resultado = c;
-}
-
-
-printf("%d eh o maior", resultado);
-
-
-int n, r;
-
-
-printf ("Insira o Valor:");
-scanf("%d", &n);
-
-if (n>0){
-	r = n*-1;
-}
-else {
-	r = n *n;
-}
-
-printf ("%d", r);
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	return 0;
 }
