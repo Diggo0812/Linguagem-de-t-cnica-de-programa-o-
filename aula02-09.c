@@ -5,7 +5,7 @@ void exec2 (){
 		float dola, real, cota;
 	scanf ("%f", &real);
 	scanf("%f", &cota);
-	printf("%f reais s„o %f dolinhos\n", real, (real/cota));
+	printf("%f reais s√£o %f dolinhos\n", real, (real/cota));
 }
 
  void exec3(){
@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
 	
 	case 8:
 		retorno = exec8();
-		printf("")
+		printf("\t")
 	break;
 }
 	return 0;
