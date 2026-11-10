@@ -1,60 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-/* crie um programa que leia um numero, entre 1 e 9 e caso seja positivo,
-verifique se ele é um numero primo, caso seja, imprima seu doblo,caso não seja primo,
-verifique se é par ou impar. se for par mostre o resultado da soma com 2. se for impar 
-mostre seu proximo e seu anterior. caso seja negativo mostre seu inverso.
-caso não esteja entre 1 e 9 mostre _out_of_range. */
+// bloco de código reutilizavel por todo o programa,
+// que recebe dois valores inteiros para realizar o calculo
+int calcula_maior (int a, int b){
+	return ((a+b+(abs((a-b))))/2);
+}
 
 int main(int argc, char *argv[]) {
 	
-	int n;
-	printf("entre com o numero: ");
-	scanf("%d" , &n);
+	int vet[10];
+	int i, maior;
 	
-	// equivalente (n>= 1 && n<=9
+	for(i=0; i<10; i++){
+		scanf("%d", &vet[i]);
+	}
 	
-	if (n<10 && n>0)
-		
-		// isso é interessante (!(n==4 || n==6 || n==8 || n==9))
-		
-		if(n==1 || n==2 || n==3 || n==5 || n==7)
-			
-			printf("o dobro de %d = %d", n,(n*2));
-		
-		else if(n%2 == 0)
-			printf("%d+2 = %d" , n , n+2);
-		
-		else
-			printf("|| %d|%d|%d", n-1, n,n+2);
-			
-		else printf("_out_of_range");
-		
-			
-		
-		
-	char op;
-	scanf("%c" ,&op);
-	switch(op){
-	
-	case 'a' : printf("opa ta falando com ele"); break;
-	
-	case 'b' : printf("Benedito"); break;
-	
-	case 'c' : printf("É complicada a situação"); break;
-	
-	case 'd' : printf("Tamo Junto"); break;
-	
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	for(i=1, maior=vet[0]; i<10; i++){
+		maior = calcula_maior(maior,vet[i]);
+	}
+	printf("%d eh o maior" , maior);
 	return 0;
 }
